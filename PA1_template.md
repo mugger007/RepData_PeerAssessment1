@@ -57,7 +57,7 @@ data2<-aggregate(steps~date,data,sum,na.rm=TRUE)
 hist(data2$steps) ## histogram of the total number of steps taken each day
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](Figs/unnamed-chunk-3-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -88,7 +88,7 @@ data3<-aggregate(steps~interval,data,mean,na.rm=TRUE)
 plot(data3$interval,data3$steps,type='l') ##  time series plot of the 5-minute interval and the average number of steps taken, averaged across all days
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](Figs/unnamed-chunk-5-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -182,7 +182,7 @@ data6<-aggregate(steps~date,data4,sum,na.rm=TRUE)
 hist(data6$steps) ## histogram of the total number of steps taken each day
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](Figs/unnamed-chunk-10-1.png)<!-- -->
 
 ```r
 mean(data5) ## mean of the total number of steps taken per day 
@@ -233,4 +233,4 @@ p<-ggplot(data7,aes(x=interval,y=steps))+geom_line()+facet_grid(week~.)+labs(x='
 print(p) ## plot containing a time series plot of the 5-minute interval and the average number of steps taken
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](Figs/unnamed-chunk-12-1.png)<!-- -->
